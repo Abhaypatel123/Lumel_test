@@ -7,6 +7,7 @@ import { getGrandTotal } from '../utils/helpers';
 import "./allocationtable.css";
 
 const columns = ['Label', 'Value', 'Input', 'Allocation %', 'Allocation Val', 'Variance %'];
+
 const AllocationTable = () => {
     const rows = useSelector((state) => state.allocation.rows);
     const total = getGrandTotal(rows);

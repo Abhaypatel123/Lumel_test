@@ -48,13 +48,14 @@ const TableRow = ({ row, level = 0 }) => {
                     <button onClick={handleAbsolute}>Allocation Val</button>
                 </td>
                 <td>
-                    {variance.toFixed(2)}%
+                    {variance && variance.toFixed(2)}%
                 </td>
             </tr>
             {row.children &&
                 row.children.map((child) => (
                     <TableRow key={child.id} row={child} level={level + 1} />
-                ))}
+                ))
+            }
         </>
     );
 };
