@@ -43,7 +43,6 @@ const allocationSlice = createSlice({
 
             const update = (nodes) => {
                 return nodes.map((node) => {
-                    console.log("update.....",node,nodes,action,state)
                     if (node.id === id) {
                         if (node.children) {
                             const total = node.children.reduce((sum, c) => sum + c.value, 0);
